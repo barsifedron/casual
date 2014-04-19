@@ -18,11 +18,11 @@ import javax.persistence.*;
 @NamedQueries({
     @NamedQuery(
             name = "com.wandera.wanderapp.core.Notification.findAll",
-            query = "SELECT n FROM Notification n"
+            query = "SELECT n FROM Notification n ORDER BY eventType , eventTimestamp DESC"
     ),
     @NamedQuery(
             name = "com.wandera.wanderapp.core.Notification.findByUserUuid",
-            query = "SELECT n FROM Notification n WHERE n.userGuid = :userGuid ORDER BY eventType, eventTimestamp"
+            query = "SELECT n FROM Notification n WHERE n.userGuid = :userGuid ORDER BY eventType , eventTimestamp DESC"
     ),
     @NamedQuery(
             name = "com.wandera.wanderapp.core.Notification.findByNotificationUuid",

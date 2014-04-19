@@ -7,6 +7,7 @@ package com.wandera.wanderapp.resources;
 
 import com.wandera.wanderapp.core.Notification;
 import com.wandera.wanderapp.dao.NotificationDAO;
+import com.wandera.wanderapp.resources.views.NotificationsView;
 import io.dropwizard.hibernate.UnitOfWork;
 import java.util.List;
 import java.util.UUID;
@@ -32,10 +33,16 @@ public class UserNotificationresource {
 
     @GET
     @UnitOfWork
-    public List<Notification> getNotification(@PathParam("userUuid") UUID userUuid) {
+    public List<Notification> getNotificationsForUser(@PathParam("userUuid") UUID userUuid) {
         return notificationDAO.findByUserUuid(userUuid);
     }
 
-
+    @GET
+    @UnitOfWork
+    @Path("/view")
+    @Produces(MediaType.TEXT_HTML)
+    public NotificationsView getNotifications(@PathParam("userUuid") UUID userUuid) {
+        return new NotificationsView(notificationDAO.findByUserUuid(userUuid));
+    }
 
 }

@@ -7,7 +7,8 @@ package com.wandera.wanderapp.resources;
 
 import com.wandera.wanderapp.core.Notification;
 import com.wandera.wanderapp.dao.NotificationDAO;
-import com.wandera.wanderapp.resources.views.IndexView;
+import com.wandera.wanderapp.resources.views.NotificationView;
+import com.wandera.wanderapp.resources.views.NotificationsView;
 import io.dropwizard.hibernate.UnitOfWork;
 import java.util.List;
 import java.util.UUID;
@@ -41,7 +42,7 @@ public class NotificationsResource {
 
     @GET
     @UnitOfWork
-    public List<Notification> listNotifications() {
+    public List<Notification> getNotifications() {
         return notificationDAO.findAll();
     }
 
@@ -49,8 +50,8 @@ public class NotificationsResource {
     @UnitOfWork
     @Path("/view")
     @Produces(MediaType.TEXT_HTML)
-    public IndexView index() {
-        return new IndexView();
+    public NotificationsView getNotificationsView() {
+        return new NotificationsView(notificationDAO.findAll());
     }
 
     @GET
@@ -58,6 +59,17 @@ public class NotificationsResource {
     @Path("/{notificationUuid}")
     public Notification getNotification(@PathParam("notificationUuid") UUID notificationUuid) {
         return notificationDAO.findByNotificationUuid(notificationUuid).get();
+    }
+
+    @GET
+    @UnitOfWork
+    @Path("/{notificationUuid}/view")
+    /**
+     * A simple notification view. The web app will provide something better
+     */
+    @Produces(MediaType.TEXT_HTML)
+    public NotificationView getNotificationView(@PathParam("notificationUuid") UUID notificationUuid) {
+        return new NotificationView(notificationDAO.findByNotificationUuid(notificationUuid).get());
     }
 
     @POST
