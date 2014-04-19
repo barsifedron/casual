@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Fri Apr 18 15:05:16 CEST 2014:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.10.1.1 - (1458268): instance a816c00e-0145-74f0-e818-000003485ad0 
+on database directory /home/jmt/Dev/Wanderapp/target/example with class loader sun.misc.Launcher$AppClassLoader@419829a9 
+Loaded from file:/home/jmt/Dev/Wanderapp/target/Wanderapp-1.0-SNAPSHOT.jar
+java.vendor=Oracle Corporation
+java.runtime.version=1.7.0_21-b02
+user.dir=/home/jmt/Dev/Wanderapp
+os.name=Linux
+os.arch=amd64
+os.version=3.10-3-amd64
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
