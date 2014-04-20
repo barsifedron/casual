@@ -1,0 +1,27 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+            <!--Sidebar content-->
+
+            Search: <input ng-model="query">
+            Sort by:
+            <select ng-model="orderProp">
+                <option value="name">Alphabetical</option>
+                <option value="eventTimestamp">Newest</option>
+            </select>
+
+        </div>
+        <div class="col-md-10">
+            <!--Body content-->
+
+            <ul class="notifications">
+                <li ng-repeat="notification in notifications| filter:query| orderBy:orderProp" class="thumbnail">
+                    <a href="#/notifications/{{notification.notificationGuid}}" class="thumb"><img ng-src="img/notifications/{{notification.eventType}}.png"  height="60" width="60"></a>
+                    <a href="#/notifications/{{notification.notificationGuid}}">{{notification.eventType}}</a>
+                    <p>{{notification.title}}</p>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</div>

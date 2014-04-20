@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en" ng-app="phonecatApp">
+  <head>
+        <meta charset="utf-8">
+        <title>Google Phone Gallery</title>
+        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="css/app.css">
+        <script src="js/angular-1.1.5.js"></script>
+        <script src="js/angular-resource-1.1.5.js"></script>
+        <script src="js/controllers.js"></script>
+        <script src="js/services.js"></script>
+    </head>
+  <body ng-controller="NotificationListCtrl">
+
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-2">
+        <!--Sidebar content-->
+
+        Search: <input ng-model="query">
+
+      </div>
+      <div class="col-md-10">
+        <!--Body content-->
+
+       <ul class="notifications">
+                        <li ng-repeat="notification in notifications| filter:query">
+                            {{notification.name}}
+                            <p>{{notification.snippet}}</p>
+                        </li>
+                    </ul>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,226 @@
+[{
+"notificationGuid":"532a20d3-aef0-4554-9bc1-9561dbd6151c",
+"deviceGuid":"f897e6a4-4fb8-41ce-a07d-080da859bbf9",
+"userGuid":"99c6ac34-b017-4391-9ea7-c64d07263237",
+"eventType":"APP_INACTIVE",
+"eventSubtype":"",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"App Inactive",
+"content":"iPhone 4 app inactive since 6/1/2014",
+"eventTimestamp":"1390468020000",
+"sentTimestamp":"1390502070000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"cad4a703-723b-49a3-aa0d-80efc82035a8",
+"deviceGuid":"48f31433-0fd0-433c-ba93-ee1080cb0e09",
+"userGuid":"286416b4-7eac-433c-876c-339dfd8bcd68",
+"eventType":"SITE_BLOCKED",
+"eventSubtype":"YOUTUBE",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"Site/App block",
+"content":"YouTube",
+"eventTimestamp":"1390145640000",
+"sentTimestamp":"1390145700000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"2affbe87-fd11-4e38-997c-7adf3dc6a9e6",
+"deviceGuid":"48f31433-0fd0-433c-ba93-ee1080cb0e09",
+"userGuid":"286416b4-7eac-433c-876c-339dfd8bcd68",
+"eventType":"SITE_BLOCKED",
+"eventSubtype":"ADULT",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"Site/App block",
+"content":"Adult",
+"eventTimestamp":"1390235400000",
+"sentTimestamp":"1390235423000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"4c10de92-0bb5-4d85-b09d-2020938bf693",
+"deviceGuid":"48f31433-0fd0-433c-ba93-ee1080cb0e09",
+"userGuid":"286416b4-7eac-433c-876c-339dfd8bcd68",
+"eventType":"SITE_BLOCKED",
+"eventSubtype":"YOUTUBE",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"Site/App block",
+"content":"YouTube",
+"eventTimestamp":"1390302000000",
+"sentTimestamp":"1390302071000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"8d7549df-8f8a-4a34-aa0d-1949f89584a7",
+"deviceGuid":"48f31433-0fd0-433c-ba93-ee1080cb0e09",
+"userGuid":"286416b4-7eac-433c-876c-339dfd8bcd68",
+"eventType":"SITE_BLOCKED",
+"eventSubtype":"",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"Security block",
+"content":"Malware detected",
+"eventTimestamp":"1390302350000",
+"sentTimestamp":"1390302370000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"275527c6-393a-4161-b2b7-a6d191eab721",
+"deviceGuid":"dcd7f334-6625-4552-b32f-78afaf545949",
+"userGuid":"315c0c1e-8c4c-458f-a37c-9b636d1fb80f",
+"eventType":"SITE_BLOCKED",
+"eventSubtype":"FACEBOOK_APP",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"Site/App block",
+"content":"Facebook App",
+"eventTimestamp":"1390466040000",
+"sentTimestamp":"1390466070000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"84e42ea6-3928-4712-91e4-d64adff53215",
+"deviceGuid":"dcd7f334-6625-4552-b32f-78afaf545949",
+"userGuid":"315c0c1e-8c4c-458f-a37c-9b636d1fb80f",
+"eventType":"SITE_BLOCKED",
+"eventSubtype":"FACEBOOK_APP",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"Site/App block",
+"content":"Facebook App",
+"eventTimestamp":"1390469400000",
+"sentTimestamp":"1390469430000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"621251b8-2e33-4370-8ff4-5cdc785d7430",
+"deviceGuid":"dcd7f334-6625-4552-b32f-78afaf545949",
+"userGuid":"315c0c1e-8c4c-458f-a37c-9b636d1fb80f",
+"eventType":"SITE_BLOCKED",
+"eventSubtype":"CNN_COM",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"Site/App block",
+"content":"www.cnn.com",
+"eventTimestamp":"1390471200000",
+"sentTimestamp":"1390471230000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"fb97d0fd-e043-4d78-9093-165e2e36d3f4",
+"deviceGuid":"dcd7f334-6625-4552-b32f-78afaf545949",
+"userGuid":"315c0c1e-8c4c-458f-a37c-9b636d1fb80f",
+"eventType":"SITE_BLOCKED",
+"eventSubtype":"FACEBOOK_APP",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"Site/App block",
+"content":"Facebook App",
+"eventTimestamp":"1390476120000",
+"sentTimestamp":"1390476180000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"ba54a7e4-6211-4921-8c4d-7fb522f9046d",
+"deviceGuid":"dcd7f334-6625-4552-b32f-78afaf545949",
+"userGuid":"315c0c1e-8c4c-458f-a37c-9b636d1fb80f",
+"eventType":"CAP_TRESHOLD_REACHED",
+"eventSubtype":"",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"Data cap threshold",
+"content":"8MB Remaining until 10/2/2014",
+"eventTimestamp":"1390482840000",
+"sentTimestamp":"1390482870000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"cbe01d4d-43fb-4bee-a43e-9421f5b34f41",
+"deviceGuid":"879c4f18-4c6e-462d-afa4-1866c0e38b18",
+"userGuid":"315c0c1e-8c4c-458f-a37c-9b636d1fb80f",
+"eventType":"CAP_EXTENDED",
+"eventSubtype":"",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"Data cap threshold",
+"content":"100MB added.  108MB remaining until 10/2/2014",
+"eventTimestamp":"1390487640000",
+"sentTimestamp":"1390487690000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"aa926c4c-b120-4178-b105-7c25b94cc916",
+"deviceGuid":"879c4f18-4c6e-462d-afa4-1866c0e38b18",
+"userGuid":"315c0c1e-8c4c-458f-a37c-9b636d1fb80f",
+"eventType":"SITE_BLOCKED",
+"eventSubtype":"",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"Security block",
+"content":"www.badsite.com",
+"eventTimestamp":"1390491240000",
+"sentTimestamp":"1390491270000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"0ec61cee-23c3-402d-aac3-d98cc18701f3",
+"deviceGuid":"879c4f18-4c6e-462d-afa4-1866c0e38b18",
+"userGuid":"315c0c1e-8c4c-458f-a37c-9b636d1fb80f",
+"eventType":"SITE_BLOCKED",
+"eventSubtype":"CNN_COM",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"Site/App block",
+"content":"www.cnn.co.uk",
+"eventTimestamp":"1390502040000",
+"sentTimestamp":"1390502070000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"b930290d-cc71-4c55-9856-df3dfa247a1d",
+"deviceGuid":"c6fdd4c4-e7a2-476a-b122-8c259eede5b2",
+"userGuid":"79bcb260-7f75-49cf-b76d-41e1c2609055",
+"eventType":"SITE_BLOCKED",
+"eventSubtype":"CNN_COM",
+"geofenceLat":"",
+"geofenceLon":"",
+"geofenceRadiusMetres":"",
+"title":"Site/App block",
+"content":"www.cnn.com",
+"eventTimestamp":"1390502040000",
+"sentTimestamp":"1390502070000",
+"readByUser":"false"}
+
+,{
+"notificationGuid":"9cc59038-0ea3-49bf-8f22-f26a9933feb0",
+"deviceGuid":"c6fdd4c4-e7a2-476a-b122-8c259eede5b2",
+"userGuid":"79bcb260-7f75-49cf-b76d-41e1c2609055",
+"eventType":"GEO_AD",
+"eventSubtype":"",
+"geofenceLat":"51,5047",
+"geofenceLon":"-0,1753",
+"geofenceRadiusMetres":"1000",
+"title":"Offer just for you!",
+"content":"Visit Starbucks Marble Arch for a free sandwich",
+"eventTimestamp":"1390480440000",
+"sentTimestamp":"1390480473000",
+"readByUser":"false"}
+
+]
