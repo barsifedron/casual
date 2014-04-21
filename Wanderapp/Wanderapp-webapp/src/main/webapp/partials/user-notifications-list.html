@@ -1,13 +1,11 @@
 <div class="container-fluid">
-    <!--<div class="col-md-2">-->
 
     <div class="page-header">
-        
         <h1>Notifications<small> Notifications for user</small></h1>
     </div>
 
 
-    <!--<div class="row-fluid">-->
+
     <div class="row">
 
         <div class="col-md-4"></div>
@@ -19,6 +17,7 @@
             Search: <input ng-model="query">
             Sort by:
             <select ng-model="orderProp">
+                <!--<option value="none"></option>-->
                 <option value="name">Alphabetical</option>
                 <option value="eventTimestamp">Newest</option>
             </select>
@@ -29,14 +28,7 @@
     <br>
     <br>
 
-
-
-
-
-
-
-
-
+    
     <ul class="notifications">
 
         <!--<div ng-controller="ReadCrtl" ng-init="init(notification.readByUser)">-->
@@ -44,7 +36,7 @@
 
 
 
-        <li ng-repeat="notification in notifications| filter:query| orderBy:orderProp" class="thumbnail">
+        <li ng-repeat="notification in mynotifications| filter:query| orderBy:orderProp" class="thumbnail">
 
 
             <div class="row">

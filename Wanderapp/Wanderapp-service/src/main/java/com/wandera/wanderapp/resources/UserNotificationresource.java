@@ -34,7 +34,8 @@ public class UserNotificationresource {
     @GET
     @UnitOfWork
     public List<Notification> getNotificationsForUser(@PathParam("userUuid") UUID userUuid) {
-        return notificationDAO.findByUserUuid(userUuid);
+        List<Notification> findByUserUuid = notificationDAO.findByUserUuid(userUuid);
+        return findByUserUuid;
     }
 
     @GET

@@ -12,8 +12,10 @@ import com.wandera.wanderapp.resources.views.NotificationsView;
 import io.dropwizard.hibernate.UnitOfWork;
 import java.util.List;
 import java.util.UUID;
+import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
@@ -36,8 +38,16 @@ public class NotificationsResource {
 
     @POST
     @UnitOfWork
-    public Notification createNotification(Notification person) {
-        return notificationDAO.create(person);
+    // convenient to fill database
+    public Notification save(Notification notification) {
+        return notificationDAO.save(notification);
+    }
+
+    @POST
+    @UnitOfWork
+    @Path("/read")
+    public Notification markRead(Notification notification) {
+        return notificationDAO.markRead(notification);
     }
 
     @GET
@@ -72,7 +82,7 @@ public class NotificationsResource {
         return new NotificationView(notificationDAO.findByNotificationUuid(notificationUuid).get());
     }
 
-    @POST
+    @DELETE
     @UnitOfWork
     @Path("/delete/{notificationUuid}")
     public void deleteNotification(@PathParam("notificationUuid") UUID notificationUuid) {

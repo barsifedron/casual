@@ -1,26 +1,39 @@
 <!doctype html>
-<html lang="en" ng-app="wandarApp">
+<html lang="en" >
+    <!--<html lang="en" ng-app="wandarApp">-->
     <head>
         <meta charset="utf-8">
-        <title>Google Phone Gallery</title>
-        <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css">
+        <title>Wandera notification Centre</title>
+        <!--<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet">-->
+        <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/app.css">
 
         <!--angular-->
-<!--        <script type="text/javascript" src="js/lib/angular-1.2.0rc1.js"></script>
-        <script type="text/javascript" src="js/lib/angular-resource-1.2.0rc1.js"></script>-->
-          <script type="text/javascript" src="js/lib/angular-1.2.0rc1.js"></script>
-<script type="text/javascript" src="js/lib/angular-resource-1.2.0rc1.js"></script>
-<script type="text/javascript" src="js/lib/angular-route-1.2.0rc1.js"></script>
-        
-        
+        <!--        <script type="text/javascript" src="js/lib/angular-1.2.0rc1.js"></script>
+                <script type="text/javascript" src="js/lib/angular-resource-1.2.0rc1.js"></script>-->
+        <script type="text/javascript" src="js/lib/angular.js"></script>
+        <script type="text/javascript" src="js/lib/angular-resource.js"></script>
+        <script type="text/javascript" src="js/lib/angular-route.js"></script>
+        <!--        <script type="text/javascript" src="js/lib/angular-1.2.0rc1.js"></script>
+                <script type="text/javascript" src="js/lib/angular-resource-1.2.0rc1.js"></script>
+                <script type="text/javascript" src="js/lib/angular-route-1.2.0rc1.js"></script>-->
+        <script type="text/javascript" src="js/lib/jquery-1.11.0.js"></script>
+        <script type="text/javascript" src="js/lib/jquery-1.11.0.js"></script>
+        <script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+
+
         <!--project specific-->
         <script src="js/app.js"></script>
         <script src="js/controllers.js"></script>
         <script src="js/services.js"></script>
+        <script src="js/filters.js"></script>
     </head>
     <body>
-        <div ng-view></div>
+
+        <div class="container-fluid" ng-app="wandarApp">
+            <div ng-view></div>
+
+        </div>
     </body>
 
 </html>

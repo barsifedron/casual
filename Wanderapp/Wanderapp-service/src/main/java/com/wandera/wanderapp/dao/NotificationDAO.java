@@ -8,7 +8,12 @@ package com.wandera.wanderapp.dao;
 import com.wandera.wanderapp.core.Notification;
 import io.dropwizard.hibernate.AbstractDAO;
 import com.google.common.base.Optional;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.UUID;
 import org.hibernate.SessionFactory;
 
@@ -32,11 +37,15 @@ public class NotificationDAO extends AbstractDAO<Notification> {
     }
 
     public Optional<Notification> findByNotificationUuid(UUID notificationUuid) {
-        return Optional.fromNullable(get(notificationUuid));
+        Optional<Notification> optional = Optional.fromNullable(get(notificationUuid));
+        if (optional.isPresent()) {
+            optional.get().setReadByUser(Boolean.TRUE);
+            persist(optional.get());
+        }
+        return optional;
     }
 
-    public Notification create(Notification notification) {
-
+    public Notification save(Notification notification) {
         return persist(notification);
     }
 
@@ -53,6 +62,27 @@ public class NotificationDAO extends AbstractDAO<Notification> {
             findByNotificationUuid.get().setReadByUser(read);
             persist(findByNotificationUuid.get());
         }
+    }
+
+    public void markRead(UUID notificationUuid) {
+        findByNotificationUuid(notificationUuid);
+    }
+
+    public Notification markRead(Notification notification) {
+        return findByNotificationUuid(notification.getNotificationGuid()).get(); // will mark read
+
+    }
+
+    public Set<UUID> getUserUuids() {
+
+        List<Notification> notifications = findAll();
+        Set<UUID> uuidSet = new HashSet<>();
+
+        for (Notification notification : notifications) {
+            uuidSet.add(notification.getUserGuid());
+        }
+        return uuidSet;
+
     }
 
 }

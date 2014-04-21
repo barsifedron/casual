@@ -1,19 +1,60 @@
-<img ng-src="/img/notifications/{{notification.eventType}}.png" class="phone">
+
+<div class="page-header">
+    <h1>Details for notification <small> {{notification.notificationGuid}}</small></h1>
+</div>
+
+<div class="row-fluid">
+
+    <div class="media" >
+
+        <a class="pull-right" href="">
+            <img class="media-object" src="/img/notifications/{{notification.eventType}}.png" alt="...">
+        </a>
+        <div class="media-body">
+
+<!--            <h1 class="media-heading">{{notification.title}}</h1><br>-->
+
+            <div class="row-fluid"><h3> Event type :{{notification.eventType}}</h3></div>
+            <div class="row-fluid"><h3> Event subtype : {{notification.eventSubtype}}</h3></div>
+            <div class="row-fluid"><h3> Notification title :{{notification.title}}</h3></div>
+            <div class="row-fluid"><h3> Content :{{notification.content}}</h3></div>
+            <br>
+
+            <div class="row-fluid"><h3> Notification ID : {{notification.notificationGuid}}</h3></div>
+            <div class="row-fluid"><h3> Device ID : {{notification.deviceGuid}}</h3></div>
+            <div class="row-fluid"><h3> User ID : {{notification.userGuid}}</h3></div>
+            <br>
+
+            <div class="row-fluid"><h3> Latitude :{{notification.geofenceLat}}</h3></div>
+            <div class="row-fluid"><h3> Longitude :{{notification.geofenceLon}}</h3></div>
+            <div class="row-fluid"><h3> Radius :{{notification.geofenceRadiusMetres}}</h3></div>
+            <br>
+
+            <div class="row-fluid"><h3> Notification Creation Timestamp :{{notification.eventTimestamp}}</h3></div>
+            <div class="row-fluid"><h3> Notification Sent Timestamp :{{notification.sentTimestamp}}</h3></div>
+<!--            <div class="row-fluid"><h3> Read By user : {{notification.readByUser}}</h3></div>-->
+        </div>
+    </div>
+
+</div>
+
+
+<!--<img ng-src="/img/notifications/{{notification.eventType}}.png" class="phone">
 
 <h1>{{notification.title}}</h1>
 
 
 
-<p> Notification ID : {{notification.notificationGuid}}</p>
-<p> Device ID : {{notification.deviceGuid}}</p>
-<p> User ID : {{notification.userGuid}}</p>
-<p> Event type :{{notification.eventType}}</p>
-<p> Event subtype : {{notification.eventSubtype}}</p>
-<p> Latitude :{{notification.geofenceLat}}</p>
-<p> Longitude :{{notification.geofenceLon}}</p>
-<p> Radius :{{notification.geofenceRadiusMetres}}</p>
-<p> Notification title :{{notification.title}}</p>
-<p> Content :{{notification.content}}</p>
-<p> Notification Creation Timestamp :{{notification.eventTimestamp}}</p>
-<p> Notification Sent Timestamp :{{notification.sentTimestamp}}</p>
-<p> Read By user : {{notification.readByUser}}</p>
+<div class="row-fluid"><h3> Notification ID : {{notification.notificationGuid}}</h3></div>
+<div class="row-fluid"><h3> Device ID : {{notification.deviceGuid}}</h3></div>
+<div class="row-fluid"><h3> User ID : {{notification.userGuid}}</h3></div>
+<div class="row-fluid"><h3> Event type :{{notification.eventType}}</h3></div>
+<div class="row-fluid"><h3> Event subtype : {{notification.eventSubtype}}</h3></div>
+<div class="row-fluid"><h3> Latitude :{{notification.geofenceLat}}</h3></div>
+<div class="row-fluid"><h3> Longitude :{{notification.geofenceLon}}</h3></div>
+<div class="row-fluid"><h3> Radius :{{notification.geofenceRadiusMetres}}</h3></div>
+<div class="row-fluid"><h3> Notification title :{{notification.title}}</h3></div>
+<div class="row-fluid"><h3> Content :{{notification.content}}</h3></div>
+<div class="row-fluid"><h3> Notification Creation Timestamp :{{notification.eventTimestamp}}</h3></div>
+<div class="row-fluid"><h3> Notification Sent Timestamp :{{notification.sentTimestamp}}</h3></div>
+<div class="row-fluid"><h3> Read By user : {{notification.readByUser}}</h3></div>-->

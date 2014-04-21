@@ -5,6 +5,7 @@
  */
 package com.wandera.wanderapp.core;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import java.math.BigInteger;
 import java.util.UUID;
 import javax.persistence.*;
@@ -37,6 +38,7 @@ public class Notification {
     //
     @Column(name = "deviceGuid", nullable = false)
     private UUID deviceGuid;
+    @JsonProperty
     @Column(name = "userGuid", nullable = false)
     private UUID userGuid;
     @Column(name = "eventType", nullable = false)

@@ -1,0 +1,30 @@
+<div class="container-fluid">
+
+    <div class="page-header">
+        <h1>Users <small> choose one for details</small></h1>
+    </div>
+
+    <ul class="users">
+
+        <!--<div ng-controller="ReadCrtl" ng-init="init(notification.readByUser)">-->
+
+        <li ng-repeat="user in users" class="thumbnail">
+
+            <div class="row">
+                <div class="col-md-2">
+                    <a href="#/notifications/user/{{user.userUuid}}" class="thumb"><img ng-src="img/notifications/user.png"></a>
+                </div>
+                    <div class="col-md-4">
+                <div class="row">
+                    User uuid :
+                </div>
+                <div class="row">
+
+
+                       <a href="#/notifications/user/{{user.userUuid}}">{{user.userUuid}}</a>
+                </div>
+                    </div>
+        </li>
+    </ul>
+
+</div>

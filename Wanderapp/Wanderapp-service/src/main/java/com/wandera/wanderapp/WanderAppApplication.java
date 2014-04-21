@@ -9,6 +9,7 @@ import com.wandera.wanderapp.core.Notification;
 import com.wandera.wanderapp.dao.NotificationDAO;
 import com.wandera.wanderapp.resources.NotificationsResource;
 import com.wandera.wanderapp.resources.UserNotificationresource;
+import com.wandera.wanderapp.resources.UsersResource;
 import io.dropwizard.Application;
 import io.dropwizard.db.DataSourceFactory;
 import io.dropwizard.hibernate.HibernateBundle;
@@ -54,6 +55,7 @@ public class WanderAppApplication extends Application<WanderAppConfiguration> {
         final NotificationDAO notificationDAO = new NotificationDAO(hibernateBundle.getSessionFactory());
         environment.jersey().register(new NotificationsResource(notificationDAO));
         environment.jersey().register(new UserNotificationresource(notificationDAO));
+        environment.jersey().register(new UsersResource(notificationDAO));
 
     }
 
