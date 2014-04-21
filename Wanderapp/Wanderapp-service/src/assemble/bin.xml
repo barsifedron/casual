@@ -1,0 +1,56 @@
+<assembly xmlns="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/plugins/maven-assembly-plugin/assembly/1.1.2 http://maven.apache.org/xsd/assembly-1.1.2.xsd">
+    <id>bin</id>
+    <formats>
+        <format>zip</format>
+    </formats>
+    <!--<includeBaseDirectory>true</includeBaseDirectory>-->
+    
+    <fileSets>
+        
+        <fileSet>
+            <directory>${basedir}/target/bin</directory>
+            <outputDirectory>bin</outputDirectory>
+            <includes>
+                <include>**</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/target/repo</directory>
+            <outputDirectory>repo</outputDirectory>
+            <includes>
+                <include>**</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/src/assemble/database</directory>
+            <outputDirectory>database</outputDirectory>
+            <includes>
+                <include>**</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${basedir}/src/assemble/script</directory>
+            <outputDirectory>/</outputDirectory>
+            <includes>
+                <include>**</include>
+            </includes>
+        </fileSet>
+
+    </fileSets>
+    
+    
+    <files>
+        <file>
+            <source>wandarapp.yml</source>
+            <outputDirectory>config</outputDirectory>
+        </file>
+        <file>
+            <source>example.keystore</source>
+            <outputDirectory>/</outputDirectory>
+        </file>
+    
+    </files>
+    
+</assembly>

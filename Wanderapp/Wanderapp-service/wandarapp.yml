@@ -11,7 +11,7 @@ database:
   password: wanderapp
 
   # the JDBC URL
-  url: jdbc:h2:target/example
+  url: jdbc:h2:database/notificationsDB
   
   
   #driverClass: org.apache.derby.jdbc.EmbeddedDriver

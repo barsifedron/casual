@@ -11,7 +11,7 @@
     </parent>
 
     <artifactId>Wanderapp-service</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <!--<version>1.0-SNAPSHOT</version>-->
     <packaging>jar</packaging>
 
     <name>Wanderapp-service</name>
@@ -25,17 +25,17 @@
 
     <dependencies>
         <dependency>
-           <groupId>io.dropwizard</groupId>
+            <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-core</artifactId>
           
         </dependency>
         <dependency>
-           <groupId>io.dropwizard</groupId>
+            <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-hibernate</artifactId>
           
         </dependency>
         <dependency>
-           <groupId>io.dropwizard</groupId>
+            <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-migrations</artifactId>
           
         </dependency>
@@ -50,13 +50,13 @@
         <!-->Depeencies from example project</-->
        
         <dependency>
-           <groupId>io.dropwizard</groupId>
+            <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-auth</artifactId>
           
        
         </dependency>
         <dependency>
-           <groupId>io.dropwizard</groupId>
+            <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-views-mustache</artifactId>
         </dependency>
         <dependency>
@@ -71,7 +71,7 @@
         </dependency>
             
         <dependency>
-           <groupId>io.dropwizard</groupId>
+            <groupId>io.dropwizard</groupId>
             <artifactId>dropwizard-testing</artifactId>
           
             <scope>test</scope>
@@ -105,8 +105,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.1</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
@@ -166,6 +166,72 @@
                                 </transformer>
                             </transformers>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            
+            
+            
+            <!--
+            The maven app assembler plugin will generate a script that sets up the classpath and runs your project.
+            Remember to set the JAVA_HOME to a JVM compatible with the Java version specified in the pom, otherwise
+            you might get the "UnsupportedClassVersionError : unsupported major.minor version 51.0" error when
+            trying to run the script (target/bin/webapp).
+            -->
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>appassembler-maven-plugin</artifactId>
+                <version>1.8</version>
+                <configuration>
+                    <assembleDirectory>target</assembleDirectory> 
+                    
+                    <extraJvmArguments>-Dpar1=@BASEDIR@ -Dpar2=@REPO@</extraJvmArguments>
+                    
+                    <programs>
+                        <program>
+                            <mainClass>com.wandera.wanderapp.WanderAppApplication</mainClass>
+                            <name>init</name>
+                            <commandLineArguments>
+                                <commandLineArgument>db</commandLineArgument>
+                                <commandLineArgument>migrate</commandLineArgument>
+                            </commandLineArguments>
+                        </program>
+                        <program>
+                            <mainClass>com.wandera.wanderapp.WanderAppApplication</mainClass>
+                            <name>start</name>
+                            <commandLineArguments>
+                                <commandLineArgument>server</commandLineArgument>
+                            </commandLineArguments>
+                        </program>
+                    </programs>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>assemble</goal>
+                        </goals>
+                    </execution>				
+                </executions>
+            </plugin>
+            
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/assemble/bin.xml</descriptor>
+                    </descriptors>
+                    <workDirectory>/target/unpack</workDirectory>
+                    <finalName>Wanderapp-service</finalName>
+                </configuration>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
