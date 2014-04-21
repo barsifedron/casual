@@ -20,9 +20,16 @@ wanderAppServices.factory('UsersResource', function($resource) {
     })
 });
 
+//wanderAppServices.factory('NotificationMarkReadResource', function($resource) {
+//    return $resource('/api/notifications/read/ ', {}, {
+//    })
+//});
 wanderAppServices.factory('NotificationMarkReadResource', function($resource) {
-    return $resource('/api/notifications/read/ ', {}, {
+
+    return $resource('/api/notifications/read/:notificationId ', {}, {
+        update: {method: 'PUT', params: {notificationId: '@notificationId'}},
     })
+    
 });
 
 wanderAppServices.factory('NotificationDeleteResource', function($resource) {

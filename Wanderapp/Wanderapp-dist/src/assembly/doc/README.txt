@@ -75,7 +75,7 @@ This will launch the wanderapp-webapp
 
 
 Open your web-browser and go to the adress :  http://localhost:8080/
-You should see a list of users. Click on one of them to see all it's notifications!
+You should see a list of users. Click on one of them to see all his notifications!
 
 
 

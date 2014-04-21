@@ -43,11 +43,11 @@ public class NotificationsResource {
         return notificationDAO.save(notification);
     }
 
-    @POST
+    @PUT
     @UnitOfWork
-    @Path("/read")
-    public Notification markRead(Notification notification) {
-        return notificationDAO.markRead(notification);
+    @Path("/read/{notificationUuid}")
+    public void markRead(@PathParam("notificationUuid") UUID notificationUuid) {
+        notificationDAO.markRead(notificationUuid);
     }
 
     @GET
@@ -87,13 +87,6 @@ public class NotificationsResource {
     @Path("/delete/{notificationUuid}")
     public void deleteNotification(@PathParam("notificationUuid") UUID notificationUuid) {
         notificationDAO.deleteNotification(notificationUuid);
-    }
-
-    @POST
-    @UnitOfWork
-    @Path("/read/{notificationUuid}")
-    public void markNotificationRead(@PathParam("notificationUuid") UUID notificationUuid, @QueryParam("read") boolean read) {
-        notificationDAO.markNotificationRead(notificationUuid, read);
     }
 
 }

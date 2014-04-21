@@ -5,6 +5,7 @@
  */
 package com.wandera.wanderapp.resources;
 
+import com.wandera.wanderapp.resources.utils.UserUuid;
 import com.wandera.wanderapp.dao.NotificationDAO;
 import io.dropwizard.hibernate.UnitOfWork;
 import java.util.ArrayList;
