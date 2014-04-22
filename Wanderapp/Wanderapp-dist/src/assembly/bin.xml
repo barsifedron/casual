@@ -23,13 +23,13 @@
                 <include>**</include>
             </includes>
         </fileSet>
-        <fileSet>
+<!--        <fileSet>
             <directory>${basedir}/src/assembly/doc</directory>
             <outputDirectory>/</outputDirectory>
             <includes>
                 <include>**</include>
             </includes>
-        </fileSet>
+        </fileSet>-->
         <fileSet>
             <directory>${basedir}/src/assembly/database</directory>
             <outputDirectory>/Wanderapp-service/database</outputDirectory>
@@ -41,6 +41,12 @@
       
 
     </fileSets>
-    
+    <files>
+        <file>
+            <source>${basedir}/target/README.txt</source>
+            <outputDirectory>/</outputDirectory>
+            <filtered>true</filtered>
+        </file>
+    </files>
     
 </assembly>

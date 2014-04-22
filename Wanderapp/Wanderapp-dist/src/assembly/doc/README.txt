@@ -7,7 +7,6 @@
 
 
 
-
 --------------------------------------------------------------------------------
 ----------------------------------- INTRODUCTION -------------------------------
 --------------------------------------------------------------------------------
@@ -27,13 +26,13 @@ Here is a description of this Zip arborescence :
 
 notification-wanderapp-project-and-dist.zip
 |-- README.txt
-|-- Wanderapp-dist.zip    
+|-- ${wanderapp.dist.name}-dist.zip  
 `-- wanderapp-maven-project.zip
 
 
 - The zip fle wanderapp-maven-project.zip contains the maven project.
 
-- The zip file Wanderapp-dist.zip contains the ready to deploy build
+- The zip file ${wanderapp.dist.name}-dist.zip contains the ready to deploy build
 
 
 --------------------------------------------------------------------------------
@@ -60,7 +59,7 @@ notification-wanderapp-project-and-dist.zip :
 
 After unzip, you should have this arborescence :
 
-`-Wanderapp/
+`-${wanderapp.dist.name}/
 |-- Wanderapp-service
 `-- Wanderapp-webapp
 
@@ -71,7 +70,7 @@ After unzip, you should have this arborescence :
 
 In your shell, navigate to 
 
-`-Wanderapp/
+`-${wanderapp.dist.name}/
   |-- Wanderapp-service
 
 and type :    "sh start.sh"
@@ -86,7 +85,7 @@ This will launch the Wanderapp-service with the preconfigured database.
 
 
 In your shell, navigate to 
-`-Wanderapp/
+`-${wanderapp.dist.name}/
   `-- Wanderapp-webapp
 and type :    "sh start.sh"
 
@@ -186,7 +185,7 @@ It is of course possible to empty it and start from scratch. To do so :
 - Stop the Wonderapp-service.
 - Delete the file : notificationsDB.h2.db, located here
 
-`-Wanderapp
+`-${wanderapp.dist.name}/
   |-- Wanderapp-service
   |   |-- database
   |   |   |-- notificationsDB.h2.db
@@ -195,7 +194,7 @@ It is of course possible to empty it and start from scratch. To do so :
 
 Navigate to 
 
-`-Wanderapp
+`-${wanderapp.dist.name}/
   |-- Wanderapp-service
 
 
@@ -214,7 +213,7 @@ You can populate your database again with curl by launching the script:
 
   sh database/notifsCurl.sh     located here:
 
-`-- Wanderapp
+`--${wanderapp.dist.name}/
     |-- Wanderapp-service
     |   |-- database
         |   |   `-- notifsCurl.sh
